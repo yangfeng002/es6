@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>解构赋值用途</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//用途1:交换变量
+			let x= 1;
+			let y = 2;
+			[x,y] = [y,x];
+			console.log(x+"---"+y);
+			
+			//用途2:函数返回多个值(数组或者对象)
+			
+			function example(){
+				return [1,2,3]
+			}
+			let [a,b,c] = example();
+			console.log(a+" "+ b+" "+c);
+			
+			function exam() {
+			  return {
+			    foo: 1,
+			    bar: 2
+			  };
+			}
+			let { foo, bar } = exam();
+			console.log(foo+" "+bar);
+			
+			//用途3:函数参数的定义（解构赋值可以方便地将一组参数与变量名对应起来)
+			function f([x,y]){
+				console.log(x);
+				console.log(y);
+				return x+y
+			}
+		    console.log(f([1,2]))
+			
+			
+			//用途4：提取json数据
+			let jsonData = {
+			  id: 42,
+			  status: "OK",
+			  data: [867, 5309]
+			};
+			
+			let { id, status, data: number } = jsonData;
+			console.log(id, status, number);
+			
+			//用途5：函数的参数默认值制定
+			
+			//用途6:遍历 Map 结构,可以指定需要的key,value
+			const map = new Map();
+			map.set('first', 'hello');
+			map.set('second', 'world');
+            
+			for(let [,value] of map){
+				console.log(value);
+			}
+			for(let [key,] of map){
+				console.log(key);
+			}
+			
+			
+			
+		</script>
+	</body>
+</html>

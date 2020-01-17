@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>es6 let声明变量</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/**
+			 * let和const讲解
+			 * {} 表示块级作用域，let是局部变量，必须先声明才可以使用
+			 */ 
+			 
+		    {
+			    //a = "test"; //必须先声明
+				let a = 11;
+				//console.log(a);
+				//let a = "覆盖前一个值"; //同一作用域内只能声明一次
+			}
+			
+			let b = 1;
+			//console.log(window.b);
+			 
+			//console.log(a);
+			
+		   /**
+			* 解构赋值
+			* 1.数组的解构赋值
+			* 2.对象解构赋值
+			* 
+			*/
+		    //数组
+			let [a,d,c] = [1,2];
+			
+			//对象
+			let {foo} = {baz:'baz'};
+			console.log(foo);
+			
+			let{log} = console;
+			log("hello");
+			
+			let{foo:baz} = {foo:'aaa',bar:'bbb'};
+			console.log(baz);
+			
+			 let x;
+			({x} = {x:1});
+			
+		
+		</script>
+	</body>
+</html>

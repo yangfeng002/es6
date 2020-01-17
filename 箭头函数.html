@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/* function show(){
+				 return 1;
+			 } */
+			  //使用性不高 
+			 // let show = ()=>1;
+			 // console.log(show());
+			 
+			 /* 实用性比较高*/
+			 let show = (a=12,b=5)=>{
+				 //语句
+				 //return 
+				 return a+b;
+			 }
+			 console.log(show(1,5));
+			 
+			 //var id = 10;
+			 let json = {
+				 id:1,
+				 show:function(){
+					 setTimeout(()=>{
+						 alert(this.id);
+					 },2000)
+				 }
+			 }
+			 json.show();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>函数</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//函数参数可以给默认值
+			  function show({a=0,b=0} = {}){
+				  console.log(a,b);
+			  }
+			  //show('welcome','牧马人');
+			  show({a:33,b:9});
+		</script>
+	</body>
+</html>

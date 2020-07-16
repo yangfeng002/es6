@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>promise对象</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/* 1.语法 */
+			/* new Promise(function(resolve,reject){
+				 //resolve:成功调用
+				 //reject:失败调用
+			 }); */
+			 
+			 /* 2.实例和调用then方法*/
+			 let a= 1;
+			 let promise = new Promise(function(resolve,reject){
+				 if(a==10){
+					 resolve('成功');
+				 }else{
+                     reject('失败了');					 
+				 }
+			 })
+			 //3.resolve状态回调和reject状态回调  Promise.then(success,fail)
+			 promise.then((res)=>{
+				 console.log(res);
+			 }/* ,(err)=>{
+				 console.log(err);
+			 } */)
+			 
+			 /* 4.catch方法，捕获异常的回调*/
+			 promise.catch((err)=>{
+				 console.log(err);
+			 })
+			 
+			 /* 常用写法*/
+		    promise.then((value)=>{
+				
+			 }).catch(err=>{
+				
+			});
+			
+			/* 5.resolve方法和reject方法 */
+			 
+		</script>
+	</body>
+</html>

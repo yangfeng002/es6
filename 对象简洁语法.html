@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>es6对象简洁语法</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//es6中语法简洁
+			let name = "jack";
+			let age = 20;
+			let json = {
+				name,//es6中等价于name:name
+				age, //age:age
+				/* showName:function(){
+					return this.name;
+				} */
+				showName(){
+					return this.name
+				}
+			}
+			console.log(json.showName());
+		</script>
+	</body>
+</html>

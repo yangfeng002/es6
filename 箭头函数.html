@@ -26,11 +26,17 @@
 				 id:1,
 				 show:function(){
 					 setTimeout(()=>{
-						 alert(this.id);
+						// alert(this.id);
 					 },2000)
 				 }
 			 }
 			 json.show();
+			 
+			 /* 立即执行的箭头函数 */
+			 (()=>{
+               console.log('welcome to internet');
+			 })()
+			 
 		</script>
 	</body>
 </html>

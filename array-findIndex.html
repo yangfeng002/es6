@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>array数组的findIndex方法</title>
+	</head>
+	<body>
+		<script>
+			//find是用来查找第一个符合条件的数组成员
+			let arr = [29,200,101,100,32];
+			let res = arr.findIndex((val,index,arr)=>{
+				return val>300
+			})
+			console.log(res);
+		</script>
+	</body>
+</html>

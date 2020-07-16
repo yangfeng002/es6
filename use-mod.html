@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>模块化讲解</title>
+	</head>
+	<body>
+		<script type="module">
+			/* 实例1  */
+			//import './modules/m1.js' //引入文件
+		    //引入文件主要是使用文件中导出的数据
+			
+			/* 实例2：可以引入多个，使用别名as */
+			/* import {a,b,c} from './modules/m1.js'
+			console.log(a,b,c); */
+			
+			/* 实例3：引入* */
+			import * as modTwo from './modules/m1.js'
+			console.log(modTwo);
+			
+			
+		</script>
+	</body>
+</html>

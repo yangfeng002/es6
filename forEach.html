@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>数组的forEach循环</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//forEach循环的使用
+			let arr = ['apple','banana','pear','orange','tomato'];
+			arr.forEach(function(val,index,arr){
+				//val当前值（必填），index索引（可选），arr数组（可选）,this指向谁
+				console.log(val,index,arr,this);
+			},123)
+		</script>
+	</body>
+</html>

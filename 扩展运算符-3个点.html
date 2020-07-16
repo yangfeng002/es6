@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>扩展运算符--3个点</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+			/** ...扩展运算符、reset运算符
+			 * 要点：既可以展开，也可以收起来
+			 * 用途：可以数组排序使用
+			 */
+			  let arr = ['apple','banana'];
+			  console.log(...arr);//apple,banana
+			  //配合函数来使用
+			  function show(...a){
+				  //console.log(a);//单独传值，那么a为1，若是...a，a此时就是一个数组
+				  return a.sort();
+			  }
+			  //show(1,2,3,4,5);
+			  console.log(show(1,3,9,8,7));
+			  
+			  //剩余参数只能放在最后面
+			  function test(a,b,...c){
+				  console.log(...c);
+			  }
+			  test(1,3,4,2);
+		</script>
+	</body>
+</html>

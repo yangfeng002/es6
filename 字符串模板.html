@@ -6,18 +6,25 @@
 	</head>
 	<body>
 		<script type="text/javascript">
-			// includes() startsWith()  endsWith()  repeat();
-			
+			/* 1.字符串模板，在遍历的时候使用比较方便 */
 			let name = '张三';
 			let age = 20;
-			console.log(`你好${name},今年${age}岁了`);
+			console.log(`你好${name},今年${age}岁了`);//反单引号，变量值利用${}方式来解析
 			
+			
+			/* 2.字符串的新增方法 */
+			// includes() startsWith()  endsWith()  repeat();
 			let a = "xxdadfwef";
+			console.log(a.includes('x'));
 			let b = "https://ke.qq.com/webcourse/index.html#cid=421133&term_id=100502731&taid=3532228349291789&vid=y1423bekae4";
 			console.log(a.startsWith("https"));
 			console.log(a.endsWith("f"));
+			debugger
+			if(navigator.userAgent.includes("Chrome")){
+				//alert('是Chrome')
+			}
 			
-			console.log("x".repeat(2));
+			console.log("x".repeat(2)); //表示重复变量n次
 		</script>
 	</body>
 </html>
